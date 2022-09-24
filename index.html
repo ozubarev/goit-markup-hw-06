@@ -446,7 +446,7 @@
         </div>
         <form class="footer-form">
           <p class="footer-text">підпишіться на розсилку</p>
-          <input type="email" name="email" class="form-input">
+          <input type="email" name="email" placeholder="E-mail" class="form-input">
           <button type="submit" class="form-btn">Підписатися</button>
         </form>
       </div>
@@ -456,7 +456,20 @@
 
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <form class="modal-form"></form>
+        <form class="modal-form">
+          <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
+          <input type="name" name="name" id="name" class="modal-input">
+          <label for="name">Ім'я</label>
+          <input type="tel" name="mobile-phone" id="tel">
+          <label for="tel">Телефон</label>
+          <input type="email" name="email" id="email">
+          <label for="email">Пошта</label>
+          <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
+          <label for="comment">Коментар</label>
+          <input type="checkbox" name="privacy" id="privacy" value="privacy">
+          <label for="privacy">Погоджуюся з розсилкою та приймаю Умови договору</label>
+          <button type="submit" class="modal-btn">Відправити</button>
+        </form>
         <button data-modal-close type="button" class="close-btn">
           <svg width="18" height="18">
             <use href="./img/icons.svg#icon-close-black"></use>
