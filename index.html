@@ -458,16 +458,40 @@
       <div class="modal">
         <form class="modal-form">
           <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
-          <input type="name" name="name" id="name" class="modal-input">
-          <label for="name">Ім'я</label>
-          <input type="tel" name="mobile-phone" id="tel">
-          <label for="tel">Телефон</label>
-          <input type="email" name="email" id="email">
-          <label for="email">Пошта</label>
-          <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
-          <label for="comment">Коментар</label>
-          <input type="checkbox" name="privacy" id="privacy" value="privacy">
-          <label for="privacy">Погоджуюся з розсилкою та приймаю Умови договору</label>
+          <ul class="list">
+            <li>
+              <label>
+                <input type="name" name="text" class="modal-input">
+                Ім'я
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="tel" name="mobile-phone">
+                Телефон
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="email" name="email">
+                Пошта
+              </label>
+            </li>
+            <li>
+              <label>
+                <textarea name="comment" placeholder="Введіть текст"></textarea>
+                Коментар
+              </label>
+            </li>
+            <li>
+              <label class="modal-privacy">
+                <input type="checkbox" name="privacy" value="privacy" class="checkbox-input">
+                <span class="check-icon"></span>
+                <div class="privacy-text">Погоджуюся з розсилкою та приймаю
+                <a href="#" class="modal-link">Умови договору</a></div>
+              </label>
+            </li>
+          </ul>
           <button type="submit" class="modal-btn">Відправити</button>
         </form>
         <button data-modal-close type="button" class="close-btn">

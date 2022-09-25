@@ -211,14 +211,12 @@ svg {
   border-width: 0;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  color: var(--accent-color);
-  background-color: var(--white-color);
+background-color: #188CE8;
 }
 
 /* Features */
@@ -557,11 +555,16 @@ svg {
 .form-input {
   width: 358px;
   height: 50px;
-  padding: 0;
+  padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
+  outline: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
 }
 
 .form-btn {
@@ -580,6 +583,12 @@ svg {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #188CE8;
 }
 
 /* Portfolio */
@@ -786,6 +795,50 @@ svg {
   color: var(--title-text-color);
 }
 
+.modal-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px
+}
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../img/checkbox.svg);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .check-icon {
+  background-image: url(../img/checkbox-activ.svg);
+}
+
+.privacy-text {
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.modal-link {
+  color: var(--accent-color);
+}
+
 .modal-btn {
   display: flex;
   align-items: center;
@@ -804,10 +857,11 @@ svg {
   color: var(--white-color);
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #188CE8;
 }
+
